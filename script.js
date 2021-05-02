@@ -1,3 +1,15 @@
+// play sounds multiple with elements on html 
+function playFile( file )
+{
+    var audio = document.createElement('audio');
+    audio.src = file;
+    document.body.appendChild(audio);
+    audio.play();
+    
+    audio.onended = function () {
+      this.parentNode.removeChild(this);
+    }
+}
 
 // calculator opeeration section class
 
@@ -141,7 +153,6 @@ class Calculator
 }
 
 // Here are defined buttons
-
 const operationButtons = document.querySelectorAll( "[data-operation]" );
 const numberButtons = document.querySelectorAll( "[data-number]");
 
@@ -150,6 +161,12 @@ const equalButton = document.querySelector( "[data-equals]" );
 const allClearButton = document.querySelector( "[data-all-clear]" );
 const previousOperationTextElement = document.querySelector( "[data-previous-operation" );
 const currentOperationTextElement = document.querySelector( "[data-current-operation]" );
+
+//  Here are defined sounds
+const buttonClickSound = "sounds/FunctionAndOperationsClick.wav";
+const deleteClickSound = "sounds/DeleteClick.wav";
+const equalClickSound = "sounds/equalClick.wav";
+const allclearClickSound = "sounds/allclearClick.wav";
 
 // Calculator class 
 const calculator = new Calculator( previousOperationTextElement, currentOperationTextElement  );
@@ -161,6 +178,7 @@ numberButtons.forEach( button =>
     {
         calculator.appendNum( button.innerText )
         calculator.updateDisplay()
+        playFile( buttonClickSound )
     })
 })
 
@@ -171,6 +189,7 @@ operationButtons.forEach( button =>
         {
             calculator.chooseOperation( button.innerText )
             calculator.updateDisplay()
+            playFile( buttonClickSound )
         })
 })
 
@@ -179,6 +198,7 @@ equalButton.addEventListener('click', () =>
 {
     calculator.compute()
     calculator.updateDisplay();
+    playFile( equalClickSound );
 })
 
 // Add event listeners to calculator buttons - all clear button 
@@ -186,6 +206,7 @@ allClearButton.addEventListener('click', () =>
 {
     calculator.clear()
     calculator.updateDisplay();
+    playFile( allclearClickSound );
 })
 
 // Add event listeners to calculator buttons - delete button 
@@ -193,4 +214,7 @@ deleteButton.addEventListener('click', () =>
 {
     calculator.delete()
     calculator.updateDisplay();
+    playFile( deleteClickSound )
 })
+
+
