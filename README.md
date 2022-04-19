@@ -4,11 +4,11 @@ Simple project of `JS` calculator designed and prepared for training of refactor
 
 #### How to install  
 
-Simply just clone repository.  
--- `git clone https://github.com/qu3rn/AwesomeEpicCalculator.git`  
+  Simply just clone repository.  
+  -- `git clone https://github.com/qu3rn/AwesomeEpicCalculator.git`  
 
 #### How to run  
 
-00. Open index.html
-1. Enjoy! :) 
+  00. Open index.html
+  1. Enjoy! :) 
 
