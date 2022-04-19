@@ -11,6 +11,6 @@ Simple project of `JS` calculator designed and prepared for training of refactor
 
 ### How to run
 
-  00. Open index.html
+  00. Open `index.html`
   1. Enjoy! :) 
 
