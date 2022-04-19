@@ -8,7 +8,7 @@ Simple project of `JS` calculator designed and prepared for training of refactor
 
   Simply just clone repository.  
   
-  `git clone https://github.com/qu3rn/AwesomeEpicCalculator.git`  
+    `git clone https://github.com/qu3rn/AwesomeEpicCalculator.git`  
 
 ### How to run
 
