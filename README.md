@@ -1,7 +1,9 @@
 ## Calculator App 
 
 Simple project of `JS` calculator designed and prepared for training of refactor and clean code.  
-
+  
+  
+  
 #### How to install  
 ___
   Simply just clone repository.  
